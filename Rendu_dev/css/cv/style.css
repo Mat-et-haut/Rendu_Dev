@@ -1,0 +1,288 @@
+
+/* Général */
+*
+{
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	font-family: Futura, sans-serif;
+	background-color: black;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+/* Ligne */
+#container
+{
+	margin-bottom: 2em;
+}
+
+.row
+{
+	color: white;
+	margin-left: 20px;
+}
+
+.row_poster
+{
+	width: 100%;
+	object-fit: contain;
+	max-width: 300px;
+	margin-right: 10px;
+	transition: transform 450ms;
+}
+
+.row_poster:hover
+{
+	transform: scale(1.08);
+}
+
+.row_posters
+{
+	display: flex;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	padding: 20px;
+}
+
+.row_posters::-webkit-scrollbar
+{
+	display: none;
+}
+
+.row_posterlarge
+{
+	max-height: 400px;
+}
+
+.row_posterlarge:hover
+{
+	transform: scale(1.08);
+}
+
+/* Header */
+.nav
+{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	z-index: 1;
+	transition-timing-function: ease-in;
+	transition: all 0.5s;
+}
+
+.nav_black
+{
+	background-color: black;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	z-index: 1;
+	transition-timing-function: ease-in;
+	transition: all 0.5s;
+}
+
+.nav_logo
+{
+	width: 160px;
+	object-fit: contain;
+}
+
+.nav_back
+{
+	width: 80px;
+	object-fit: contain;
+}
+
+/* Bannière */
+.banner
+{
+	background-image: url('../../img/background.png');
+	background-size: cover;
+	background-position: center center;
+	color: white;
+	object-fit: contain;
+	height: 448px;
+}
+
+.banner_contents
+{
+	margin-left: 30px;
+	padding-top: 140px;
+	height: 190px;
+}
+
+.banner_title
+{
+	font-size: 3rem;
+	font-weight: 800;
+	padding-bottom: 0.3rem;
+	font-style: bold;
+	text-transform: uppercase;
+}
+
+.banner_description
+{
+	width: 100rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    max-width: 520px;
+    height: 180px;
+}
+
+.banner_btn
+{
+	cursor: pointer;
+	color: white;
+	outline: none;
+	border: none;
+	font-weight: 700;
+	border-radius: 0.2vw;
+	padding: 1rem 3rem;
+	margin-top: 1rem;
+	margin-right: 1rem;
+	background-color: #e50914;
+	text-transform: uppercase;
+}
+
+.banner_btn:hover
+{
+	color: black;
+	background-color: #e6e6e6;
+	transition: all 0.2s;
+}
+
+.banner_bottom
+{
+	margin-top: 145px;
+	height: 7.4rem;
+background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), black)}
+
+.footer
+{
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.socialmedias
+{
+	display: flex;
+	list-style-type: none;
+}
+
+.fa-brands
+{
+	color: white;
+	margin: 50px;
+}
+
+.fa-brands:hover
+{
+	color: #e50914 ;
+	transform: scale(1.2);
+	transition: all 0.2s;
+}
+
+.copyright
+{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.copyright a
+{
+	color: white;
+}
+
+.copyright a:hover
+{
+	color: #e50914 ;
+	transition: all 0.2s;
+}
+
+/* Popup container */
+.popup
+{
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext
+{
+	visibility: hidden;
+	width: 160px;
+	background-color: white;
+	color: black;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after
+{
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show
+{
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+animation: fadeIn 1s}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn
+{
+	from
+	{
+		opacity: 0;
+	}
+
+	to
+	{
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn
+{
+	from
+	{
+		opacity: 0;
+	}
+
+	to
+	{
+		opacity:1 ;
+	}
+}
